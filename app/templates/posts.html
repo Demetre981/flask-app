@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block title %}
+All articles in the website
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h1>All articles in the website</h1>
+
+    {% if articles|length > 0 %}
+        {% for el in articles %}
+        
+            <div class="alert alert-info">
+                <h2>{{ el[1] }}</h2>
+                <p>{{ el[2] }}</p>
+                <a href="/posts/{{ el[0] }}"" class="btn btn-warning">More</a>
+            </div>
+
+           
+        {% endfor %}
+    {% else %}
+    <p>We don't have any articles:(</p>
+    {% endif %}
+</div>
+
+{% endblock %}
