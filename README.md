@@ -12,6 +12,16 @@ git clone <repo-url>
 pip install flask
 ```
 
+## Go to app
+
+```bash
+cd app
+```
+
+```bash
+$env:FLASK_APP = "__init__"
+```
+
 ## Running The App
 
 ```bash
